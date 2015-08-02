@@ -11,3 +11,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
+# tmux
+alias tma='tmux attach -d -t'
+alias tmn='tmux new -s $(basename $(pwd))'
+alias tml='tmux list-sessions'
+alias sem='cd /Users/ken/Dropbox/Uni/Semester6/' #So tedious to typo out the whole word
+alias os='cd /Users/ken/Dropbox/Uni/Semester6/Operating\ Systems'
+alias dsp='cd /Users/ken/Dropbox/Uni/Semester6/DistributedSystems'
+alias evo='cd /Users/ken/Dropbox/Uni/Semester6/Evolutionary\ Computation'
+alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
+alias hstop="/usr/local/Cellar/hadoop/2.6.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/stop-dfs.sh"
